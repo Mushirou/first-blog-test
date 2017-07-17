@@ -25,7 +25,7 @@ SECRET_KEY = 'l35k)5nv68j%fj%wl#-!4fu6h9fg%a2sw0qoc)1-!52y)69gz-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://lupimus.pythonanywhere.com']
+ALLOWED_HOSTS = ['lupimus.pythonanywhere.com']
 
 
 # Application definition
