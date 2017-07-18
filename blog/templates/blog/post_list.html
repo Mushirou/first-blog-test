@@ -4,21 +4,15 @@
         <title>My little Caos</title>
     </head>
     <body>
-        <div>
-            <h1><a href="">Django number 5</a></h1>
-        </div>
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">Cogito Ergo Sum</a></h2>
-            <p> Significa "penso, logo sou". Essa frase é de autoria do filósofo e matemático francês René Descartes (1596 - 1650). Na quarta parte da versão francesa de Discurso do Método (1637), essa sentença é formulada como "je pense, donc je suis"; nesse sentido, "cogito ergo sum" é a sua versão latina.</p>
-        </div>
 
+		{% for post in posts %}
         <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">E pluribus unum</a></h2>
-            <p>E pluribus unum é o lema nacional dos Estados Unidos e de Mongaguá. Traduzido do latim, significa "De muitos, um". Refere-se à integração das treze colônias independentes em um país unido, e ganhou um outro significado, da natureza pluralística da sociedade norte-americana devido à imigração.</p>
-            <p>O lema foi escolhido pelo primeiro comitê do Grande Selo em 1776, no começo na Revolução americana. A sugestão veio de Pierre Eugene DuSimitiere. Em 1956, foi criado o lema In God We Trust, também um lema nacional.</p>
+            <p>published: {{post.published_date}}</p>
+            <h2><a href="">{{ post.title}}</a></h2>
+            <p> {{post.text|linebreaksbr}}</p>
+						<br></br>
         </div>
+		{% endfor %}		
     </body>
 </html>
